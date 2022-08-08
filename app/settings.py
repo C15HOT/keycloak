@@ -12,6 +12,8 @@ class Settings(BaseSettings):
     KEYCLOAK_REALM_NAME: str = os.getenv('KEYCLOAK_REALM_NAME')
     KEYCLOAK_CLIENT_SECRET_KEY: str = os.getenv('KEYCLOAK_CLIENT_SECRET_KEY')
 
+    AVATAR_DB: str = os.getenv('AVATAR_DB')
+
     class Config:
         env_file = '.env'
         env_file_encoding = 'utf-8'

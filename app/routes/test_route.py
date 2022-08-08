@@ -3,8 +3,7 @@ from fastapi import APIRouter
 from keycloak import KeycloakOpenID
 
 from app.settings import get_settings
-from app.schemas.user_schema import User
-from app.libs.keycloak.admin_func import KeycloakAdminConfig
+
 from keycloak.exceptions import KeycloakPostError
 
 
