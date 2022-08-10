@@ -31,5 +31,5 @@ async def registration(user: UsersSchema):
         insert_user(user)
     except Exception:
         keycloak.keycloak_admin.delete_user(user_id=user.id)
-        raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR, detail='Не удалось записать юзера в БД')
+        raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR, detail='Failed to write user to database')
     return status.HTTP_201_CREATED

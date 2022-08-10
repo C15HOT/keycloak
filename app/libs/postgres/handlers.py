@@ -33,4 +33,5 @@ def insert_user(user: UsersSchema):
     else:
         session.add(new_user)
         session.commit()
+        session.close()
 

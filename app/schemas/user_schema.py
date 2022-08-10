@@ -4,7 +4,7 @@ from datetime import datetime, date
 from typing import Optional
 from enum import Enum
 
-class Gender(Enum):
+class Gender(str, Enum):
     male = 'male'
     female = 'female'
     other = 'other'
@@ -15,13 +15,10 @@ class UsersSchema(BaseModel):
     firstname: str
     lastname: str
     middlename: str
-    gender: str
+    gender: Gender
     birthday: date
     photo_uri: str
-    # join_data: date
     is_online: bool
-    # last_seen: datetime
-
     email: str
     password: str
 
